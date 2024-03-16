@@ -1,7 +1,6 @@
 import './CSS.css';
 import search from './search.png';
 import user from './user.png';
-import axios from 'axios'
 import { useContext, useEffect, useState } from 'react'
 import AppContext from '../Context/Context';
 
@@ -9,18 +8,7 @@ function Navbar() {
 
   const [myGenre, setMyGenre]= useState(null)
   
-  // let genreURL='https://api.themoviedb.org/3/genre/movie/list?api_key=ff16ea4bba5e1d3b0b2ef3f3adc3be2c'
-  // async function getGenre(){
-  //   const response = await axios.get(genreURL)
-    // console.log(response.data.genres[1].name)
-  //   setMyGenre(response.data.genres)
-    
-    
-  // }
-  // useEffect(()=>{
-    
-  //   getGenre()
-  // },[])
+
 
     
   const {contextGenre} = useContext(AppContext)
@@ -190,9 +178,6 @@ function Navbar() {
      </div></div>
      )
     }
-    // <input className="form-control me-1" type="search" placeholder="Search" aria-label="Search"/>
-    
-     
-    // <button>face icon</button>
+
 
 export default Navbar
